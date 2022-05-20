@@ -1,0 +1,188 @@
+ git Basic commands ---------------------------------
+
+
+  1. create a file  
+
+>>>>  touch  <filename> . <extension>
+
+ 2. remove a file 
+
+>>>>> rm  <filename> . <extension>    or  rm -rf   <filename> . <extension>
+
+
+3. create a directory/ Folder 
+
+>>>>> mkdir <directoryName>
+
+4. Delete a directory/ Folder 
+
+>>>>> rmdir <directoryName>
+
+5. list items in directory 
+
+>>>>>  ls
+
+6. get into a folder 
+
+>>>>>  cd 
+
+7. get out of folder 
+
+>>>>>  cd(space)..
+
+8.$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+
+_____________________ Tracking of file changes can only be done when file are added to staging area_____
+
+9.  To add to staging area 
+
+  9.i)
+
+>>>>> git add <fileName>  
+
+
+  9 ii) multiple files 
+ 
+>>>>> git add . 
+
+  9 iii) to add no. of files of particular extension 
+
+>>>>> git add .txt  ,  git add .html  , git add .css
+ 
+  
+
+
+10. To remove a file from staging area 
+
+>>>>> git rm --cached <fileName>
+
+11. To delete from staging & entire delete 
+
+>>>>> git rm -f <fileName>
+
+12. To know what changes we have made exactly in the file which is not staged
+
+>>>>> git diff 
+
+
+ex. $ git diff
+warning: LF will be replaced by CRLF in one.txt.
+The file will have its original line endings in your working directory
+diff --git a/one.txt b/one.txt
+index e69de29..29c3c90 100644
+--- a/one.txt
++++ b/one.txt
+@@ -0,0 +1,4 @@
++i
++Hello I am Prakash, name added
++
++
+
+
+12 ii) --------------------------for a particular file -------------------------------------------
+>>>>> git diff <fileName>
+
+ex. $ git diff one.txt
+warning: LF will be replaced by CRLF in one.txt.
+The file will have its original line endings in your working directory
+diff --git a/one.txt b/one.txt
+index 29c3c90..16a9136 100644
+--- a/one.txt
++++ b/one.txt
+@@ -1,4 +1,4 @@
+ i
+-Hello I am Prakash, name added
++Hello I am Prakash,
+
+13. To see the list of commits 
+
+>>>>> git log
+
+
+ex. $ git log
+commit 807641ba96cfabd59afcc5c011d602eb0cbb4fed (HEAD -> master)
+Author: Prakash Ravichandran <prakash.ravichandran@hashouttech.com>
+Date:   Sun May 2 12:28:30 2021 +0530
+
+    one.txt added and written some txt
+
+
+14. Some files that should not be added to any git command are to be place in .gitignore file
+
+---------------------------------------------Working with branches------------------------------------------------------------
+
+
+15. To list out no.of branches 
+
+
+>>>>> git branch 
+
+ex. 
+$ git branch
+* master
+
+16. To Create a new branch 
+
+>>>>> git branch <branch Name>
+
+17. To change to another branch 
+
+>>>>> git checkout <branch Name>
+
+ex. 
+
+$ git checkout forms
+Switched to branch 'forms'
+
+17 ii ) To create & directly checkout to the new branch created
+
+>>>>> git checkout -b <branchName>
+
+
+18. To delete a branch 
+
+>>>>> git branch -d <branchName>
+
+----------------------------------------------------Situation ----------------------------------------------------------
+
+
+
+19. my project was working fine with last commmit, problem with the new commit means 
+
+
+try --------
+
+>>>> git checkout .
+
+20. To go some particular commits 
+
+>>>> git checkout <commit id>
+
+
+&  to get back to the original master
+
+>>>>> git checkout master   (if i wish to come back to my original position )
+
+
+21. To go to a commit & doesn't need to come back & the file contents cannot come to last commit changes
+ 
+>>>>> git reset -- hard <commit id>
+--------------------github git remote-------------
+CReate a new repository on the command line:
+git init
+gid add me README.md
+git commit -m "first"
+git remote add origin https://github.com/mohansoccer/cheeta_tutorial.git
+git push -u origin master
+-----------
+push the existing repository from the command line:
+git remote add origin https://github.com/mohansoccer/cheeta_tutorial.git
+git push -u origin master
+------------------------------------------------------
+
+
+
+
+

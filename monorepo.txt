@@ -1,0 +1,13 @@
+monorepo project setup:
+install nodejs->>node -v
+instal npm->>npm -v 
+install lerna->>npm i -D lerna
+initialize->>npx lerna init
+go to file->>cd .packages
+make backend->>mkdir server-api -> cd .\server-api\
+initialize package.json->>npm init  --yes
+inside the sever-api->> create index.js main file
+installl express.js->>npm install express body-parser 
+after a while----
+removing node modules from packages->>npx lerna clean -y
+install package dependancies to root node modules ->>npx lerna bootstrap --hoist
